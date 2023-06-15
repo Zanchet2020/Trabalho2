@@ -31,12 +31,14 @@ int main(){
             scanf("%d", &y);
             inserir_no_mapa(x, y, '.', &mapa);
             grafo = constroi_grafo_com_mapa(mapa);
+            imprimir_mapa(mapa);
         } else if(!strcmp(command_buffer, "x")){
             int x, y;
             scanf("%d", &x);
             scanf("%d", &y);
             inserir_no_mapa(x, y, 'x', &mapa);
             grafo = constroi_grafo_com_mapa(mapa);
+            imprimir_mapa(mapa);
         } else if(!strcmp(command_buffer, "F")){
 
         }
