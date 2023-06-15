@@ -25,7 +25,8 @@ Mapa criar_mapa(int N, int M)
 
 inline void inserir_no_mapa(int x, int y, char valor, Mapa * mapa)
 {
-    mapa->posicoes[x][y] = valor;
+    if(x < mapa->tam_y && y < mapa->tam_x)
+        mapa->posicoes[y][x] = valor;
 }
 
 void imprimir_mapa(Mapa mapa){

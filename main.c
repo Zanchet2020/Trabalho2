@@ -15,8 +15,6 @@ int main(){
 
     Mapa mapa = criar_mapa(N, M);
 
-    imprimir_mapa(mapa);
-
     Grafo grafo = constroi_grafo_com_mapa(mapa);
 
     while(1){
