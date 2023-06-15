@@ -9,8 +9,6 @@ Mapa criar_mapa(int N, int M)
     mapa.tam_y = N;
     mapa.tam_x = M;
 
-    printf("%d %d\n", mapa.tam_x, mapa.tam_y);
-
     // primeiro quantidade de colunas
     mapa.posicoes = (char**)malloc(mapa.tam_x * sizeof(char*));
     for(int i = 0; i < M; i++){
