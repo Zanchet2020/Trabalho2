@@ -12,5 +12,7 @@ void inserir_no_mapa(int x, int y, char valor, Mapa * mapa);
 
 void imprimir_mapa(Mapa mapa);
 
+void libera_mapa(Mapa mapa);
+
 
 #endif

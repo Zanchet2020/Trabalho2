@@ -37,3 +37,10 @@ void imprimir_mapa(Mapa mapa){
         printf("\n");
     }
 }
+
+void libera_mapa(Mapa mapa){
+    for(int i = 0; i < mapa.tam_x; i++){
+        free(mapa.posicoes[i]);
+    }
+    free(mapa.posicoes);
+}

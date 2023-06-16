@@ -38,7 +38,8 @@ int main(){
             grafo = constroi_grafo_com_mapa(mapa);
             imprimir_mapa(mapa);
         } else if(!strcmp(command_buffer, "F")){
-
+            libera_grafo(grafo);
+            libera_mapa(mapa);
         }
     }
 
