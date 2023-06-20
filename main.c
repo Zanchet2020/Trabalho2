@@ -1,5 +1,5 @@
-#include "mapa.h"
 #include "grafo.h"
+#include "mapa.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,24 +1,33 @@
 #ifndef LISTA_ADJ_H
 #define LISTA_ADJ_H
 
-typedef struct 
+typedef struct node
 {
     int val;
-    node * next;
+    struct node * next;
 } node;
 
 
-typedef struct 
+typedef struct lista_adj
 {
-    node ** lista;
+    node ** list;
+    int tamanho;
 } lista_adj;
 
 
-int inserir(node * nodo, int valor);
+lista_adj cria_lista(int quant);
 
-int remover(node * nodo, int valor);
+node * inserir(node * head, int valor);
 
-int buscar(node * nodo, int valor);
+node * remover(node * head, int valor);
+
+int buscar(node * head, int valor);
+
+void libera_lista(lista_adj lista);
+
+int remover_ultimo(node * head);
+
+void imprime_lista(lista_adj lista);
 
 
 #endif

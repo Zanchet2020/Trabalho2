@@ -4,8 +4,8 @@
 #include "mapa.h"
 #include "lista_adj.h"
 
-typedef struct {
-    int ** lista_de_ligados;
+typedef struct Grafo{ 
+    lista_adj lista_de_adj;
     int quantidade;
 } Grafo;
 
