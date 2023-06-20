@@ -1,5 +1,6 @@
 #include "grafo.h"
 #include "mapa.h"
+#include "pilha.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,6 +21,7 @@ int main(){
     while(1){
         scanf("%s", command_buffer);
         if(!strcmp(command_buffer, "regioes")){
+
             
         } else if(!strcmp(command_buffer, "cam")){
             
