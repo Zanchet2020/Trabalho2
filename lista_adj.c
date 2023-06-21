@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int vazia_lista(node * head){
+    return head == NULL ? 1 : 0;
+}
 
 node * inserir(node * head, int valor){
     if(head == NULL){
@@ -32,14 +35,18 @@ int buscar(node * head, int valor){
     return buscar(head->next, valor);
 }
 
-int remover_ultimo(node * head){
-    if(head == NULL) return INT_MIN;
-    if(head->next == NULL) {
-        int temp = head->val;
-        free(head);
-        return temp;
+node * remover_ultimo(node * head, int * ret){
+    if(head == NULL) {
+        *ret = INT_MIN;
+        return NULL;
     }
-    return remover_ultimo(head->next);
+    if(head->next == NULL){
+        *ret = head->val;
+        free(head);
+        return NULL;
+    }
+    head->next = remover_ultimo(head->next, ret);
+    return head;
 }
 
 
@@ -54,13 +61,12 @@ lista_adj cria_lista(int quant){
 }
 
 void libera_lista(lista_adj lista){
+    int trash;
     for(int i; i < lista.tamanho; i++){
-        while(lista.list != NULL) remover_ultimo(lista.list[i]);
+        while(lista.list[i] != NULL) lista.list[i] = remover_ultimo(lista.list[i], &trash);
     }
     free(lista.list);
 }
-
-
 
 void imprime_lista(lista_adj lista){
     for(int i = 0; i < lista.tamanho; i++){

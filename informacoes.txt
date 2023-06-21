@@ -1,0 +1,9 @@
+Nome: Lucas Samuel Zanchet
+
+Decidi fazer uma funcao unica que faz a busca em profundidade e ao mesmo tempo marca o numero de regioes e tamanho da regiao pois nao conseguie entender como poderia fazer de outra maneira.
+
+Escolhi usar pilha explicita no codigo pois achei mais pratico para mim do que lidar com funcao recursiva
+
+Decidi tambem manter o mapa salvo em sua propria estrutura pois a minha funcao dfs destroi a lista de adjacencia, entao preciso reconstrui-la 
+
+Os nomes das minhas variaveis e funções estao deploraveis, consequências de fazer o trabalho na pressa, portanto pode ser um pouco difícil acompanhar o código.

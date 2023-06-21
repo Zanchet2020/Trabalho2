@@ -25,9 +25,11 @@ int buscar(node * head, int valor);
 
 void libera_lista(lista_adj lista);
 
-int remover_ultimo(node * head);
+node * remover_ultimo(node * head, int * ret);
 
 void imprime_lista(lista_adj lista);
+
+int vazia_lista(node * head);
 
 
 #endif

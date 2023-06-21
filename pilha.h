@@ -15,5 +15,9 @@ pilha * cria_pilha();
 
 int pvazia(pilha * pilha);
 
+void imprime_pilha(pilha * pilha);
+
+void libera_pilha(pilha * Pilha);
+
 
 #endif

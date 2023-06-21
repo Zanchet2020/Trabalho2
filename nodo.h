@@ -4,7 +4,7 @@
 typedef struct nodo
 {
     int val;
-    struct nodo * next, * ant;
+    struct nodo * next;
 } nodo;
 
 
